@@ -1,1 +1,1 @@
-CS50 course projects
+some of harvard's CS50 course projects
