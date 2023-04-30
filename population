@@ -1,0 +1,34 @@
+#include <cs50.h>
+#include <stdio.h> 
+
+int main(void)
+
+{ 
+    //  Promot for start size
+    int start;
+    do
+    {
+        start= get_int("start:");
+    }
+    while (start < 9); 
+    
+    // Promot for end size
+    int end;
+    do  
+    {
+        end= get_int("end:");
+    }
+    while ( end < start );
+    
+    // Calculate number of years until we reach threshold
+    int years =0;
+    
+    while (start < end)
+{
+    start = start + (start/3) -(start/4);
+    years++;
+}    
+    // print number of years
+    printf("%i\n", years);
+}
+
