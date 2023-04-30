@@ -1,0 +1,41 @@
+#include <stdio.h>
+#include <cs50.h>
+
+int main(void)
+
+{
+    int height;
+    int rows;
+    int spaces;
+    int hashes;
+    int hashes2;
+    
+    // Promt user for height
+    do
+    {
+    height=get_int("height:");
+    } 
+    while (height < 1 || height > 8);
+
+    
+    for (rows=0; rows < height; rows++)
+    { 
+        // Pyramid 1 spaces
+        for (spaces= height-2; spaces >= rows; spaces--)
+        printf(" ");
+        
+        //Pyramid 1 hashes
+        for (hashes= 0; hashes<= rows; hashes++)
+        printf("#");
+        
+        // Spaces between 2 pyramids
+        printf("  ");
+
+    // Pyramid 2 hashes
+        for (hashes2=0;hashes2 <=rows;hashes2++)
+        {
+            printf("#");
+        }
+    printf("\n");
+    }
+}

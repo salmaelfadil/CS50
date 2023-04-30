@@ -1,0 +1,28 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+
+{
+    int height;
+    // Promt user for height
+    do
+    {
+    height=get_int("height:");
+    } 
+    while (height < 0 || height > 8);
+    
+    for (int i= 0; i < height; i++)
+    {
+        // print blankspaces
+        for (int z= height - 1; z>= i; z--)
+        printf(" ");
+
+       // print hashes
+        for (int z= 0;z <=i; z++)
+        printf ("#");
+
+    printf ("\n");
+    }
+}
+
