@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <th> Symbol</th>
+            <th>Name</th>
+            <th>Shares</th>
+            <th>Price</th>
+            <th>Total</th>
+
+        </thead>
+        <tbody>
+            { % for row in rows }
+        <tr>
+            <td> {{ row["symbol"] }}</td>
+            <td> {{ row["name"] }}</td>
+            <td>{{ SUM(row["shares"]) }}</td>
+            <td>{{ row["price"] }}</td>
+            <td>{{ SUM(row["shares"] * row["price"] }}</td>
+        </tr>
+        {% end for %}
+        
+        <tr>
+            <td>cash</td>
+            <td col=span="3"></td>
+            <td>{{ cash }}</td>
+        </tr>
+        </tbody>
+        
+    </table>
+       
+{% endblock %}
