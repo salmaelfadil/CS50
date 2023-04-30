@@ -1,0 +1,44 @@
+h1
+{
+    color:Black;
+    text-align:center;
+
+}
+
+.image
+{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    width:60%;
+    
+}
+
+h2
+{
+    text-align:center;
+}
+
+body
+{
+font-family:Helvetica;
+}
+
+#button
+{
+    text-align:center;
+}
+
+#join
+{
+    background-color:white;
+    display:inline-block;
+    margin:auto;
+}
+
+.list:hover
+{
+    text-decoration:underline;
+}
+
+
